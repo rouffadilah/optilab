@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\title{Contoh Laporan OptiLab}
+\date{\today}
+\begin{document}
+\maketitle
+\section*{Formulasi Matematis}
+\[\begin{aligned}
+\max\quad Z &= 40x_{1} + 30x_{2} \\
+\text{dengan kendala:} & \\
+&\quad 2x_{1} + x_{2} \leq 100 \\
+&\quad x_{1} + 2x_{2} \leq 80 \\
+&\quad x_{1}\geq 0,\;x_{2}\geq 0
+\end{aligned}\]
+\section*{Hasil Penyelesaian}
+Nilai objektif optimal: $Z^* = 2200$.
+
+\[\begin{aligned}
+x_{1} &= 40 \\
+x_{2} &= 20
+\end{aligned}\]
+\subsection*{Analisis Kendala}
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule Kendala & LHS & RHS & Slack/Surplus & Status \\
+\midrule
+1 & 100 & 100 & 0 & Aktif \\
+2 & 80 & 80 & 0 & Aktif \\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent Iterasi solver yang dilaporkan: 2.
+\section*{Metode}
+Model diselesaikan sebagai Linear Programming kontinu menggunakan SciPy \texttt{linprog} dengan metode HiGHS. Hasil berlaku untuk koefisien dan asumsi yang dimasukkan.
+\end{document}

@@ -1,0 +1,7 @@
+# Runtime dependencies for Streamlit Community Cloud.
+# Deploy with Python 3.12 for a predictable compatible environment.
+streamlit==1.50.0
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+plotly==6.3.1
