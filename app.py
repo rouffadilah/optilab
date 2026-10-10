@@ -74,9 +74,13 @@ with st.sidebar:
     st.markdown("**Runtime**")
     st.caption("Solusi dihitung ketika tombol ditekan. Parameter identik menggunakan cache.")
     st.markdown("**Developer**")
-    st.caption("Rouf Fadilah")
-    st.caption("Arief Soyfan Indrawan")
-    st.caption("Kurniawan")
+    st.markdown(
+        """
+        - Rouf Fadilah
+        - Arief Soyfan Indrawan
+        - Kurniawan
+        """
+    )
 
 maximize = direction_label == "Maksimisasi"
 
