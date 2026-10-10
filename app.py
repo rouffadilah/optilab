@@ -300,3 +300,41 @@ with st.expander("Tentang model dan batasan MVP"):
     )
 
 st.caption("OptiLab MVP · Python · Streamlit · SciPy HiGHS · Plotly")
+
+st.divider()
+st.markdown(
+    """
+    <div style="text-align:center; padding: .6rem .4rem .2rem;">
+      <div style="font-size:.76rem; letter-spacing:.14em; font-weight:700; color:#667085; margin-bottom:.85rem;">
+        DEVELOPED BY
+      </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+developer_columns = st.columns(3)
+developer_names = ["Rouf Fadilah", "Arief Soyfan Indrawan", "Kurniawan"]
+for column, developer_name in zip(developer_columns, developer_names):
+    with column:
+        st.markdown(
+            f"""
+            <div style="
+                border:1px solid rgba(128,128,128,.24);
+                border-radius:12px;
+                padding:.85rem .55rem;
+                text-align:center;
+                font-weight:600;
+                min-height:3.2rem;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            ">
+              {developer_name}
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+st.markdown(
+    "<div style='text-align:center; color:#667085; font-size:.8rem; padding:.8rem 0 0;'>OptiLab · Modelling &amp; Optimization</div>",
+    unsafe_allow_html=True,
+)
